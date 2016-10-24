@@ -31,6 +31,7 @@ public class UserController {
 		session.setAttribute("user",person);
 		return new ModelAndView("redirect:/index","user",person);
 	}
+	/**对需要进行权限控制的地方进行权限控制**/
 	@RoleControl(roles={"user","admin"})
 	@RequestMapping("/detail")
 	public ModelAndView Detail(HttpSession session){
@@ -40,9 +41,9 @@ public class UserController {
 	}
 	@RoleControl(roles={"user","admin"})
 	@RequestMapping("/exit")
-	public ModelAndView exit(HttpSession session){
+	public String exit(HttpSession session){
 		//删除Session会话中的用户信息
 		session.removeAttribute("user");
-		return new ModelAndView("redirect:/logoing","msg","");
+		return "redirect:/logoing";
 	}
 }
