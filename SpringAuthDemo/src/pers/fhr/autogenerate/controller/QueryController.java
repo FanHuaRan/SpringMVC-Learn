@@ -15,8 +15,10 @@ import pers.fhr.autogenerate.entity.Examclass;
 import pers.fhr.autogenerate.entity.Person;
 import pers.fhr.autogenerate.roleauthInterceptor.RoleControl;
 import pers.fhr.autogenerate.service.IQuerySomething;
-
-@RoleControl(roles={"user","admin"})
+/**
+ * 查询控制器
+ * @author FHR
+ */
 @Controller
 public class QueryController {
 	@Autowired
@@ -25,7 +27,7 @@ public class QueryController {
 	public void setQuerySomething(IQuerySomething querySomething){
 		this.querySomething=querySomething;
 	}
-	@RoleControl(roles={"admin"})
+	@RoleControl(roles={"admin","user"})
 	@RequestMapping("/query")
 	public ModelAndView getExams(HttpSession session){
 		try {
@@ -45,9 +47,9 @@ public class QueryController {
 		
 	}
 	@RoleControl(roles={"user","admin"})
-	@RequestMapping("/querys/examstudent/{examid}")
-	public ModelAndView getExamStudent(@PathVariable int examClassID){
-		Set<Person> persons=querySomething.queryExamPersons(examClassID);
+	@RequestMapping(value="/querys/examstudent/{examid}")
+	public ModelAndView getExamStudent(@PathVariable int examid){
+		Set<Person> persons=querySomething.queryExamPersons(examid);
 		return new ModelAndView("examstu","persons",persons);
 	}
 	

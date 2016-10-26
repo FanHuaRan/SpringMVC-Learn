@@ -21,7 +21,8 @@
      <a href="exit">退出</a><br>
      <c:forEach items="${examClasss}" var="exam">
 	    班级编号：${exam.examClassId}
-	    班级名称：${exam.examClassName}<br>
+	    班级名称：${exam.examClassName}
+	  <a href="querys/examstudent/${exam.examClassId}">查询</a><br>
     </c:forEach>
   </body>
 </html>

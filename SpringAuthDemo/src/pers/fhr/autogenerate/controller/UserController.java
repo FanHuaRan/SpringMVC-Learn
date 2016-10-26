@@ -10,7 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 import pers.fhr.autogenerate.entity.Person;
 import pers.fhr.autogenerate.roleauthInterceptor.RoleControl;
 import pers.fhr.autogenerate.service.IUserDeal;
-
+/**
+ * 用户控制器
+ * @author Administrator
+ *
+ */
 @Controller
 public class UserController {
 	@Autowired
