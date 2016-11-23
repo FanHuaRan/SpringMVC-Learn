@@ -29,11 +29,12 @@ public class PersontypeDAO extends BaseHibernateDAO {
 	// property constants
 	public static final String PERSON_TYPE_NAME = "personTypeName";
 
-	public void save(Persontype transientInstance) {
+	public Integer save(Persontype transientInstance) {
 		log.debug("saving Persontype instance");
 		try {
-			getSession().save(transientInstance);
+			Integer key=(Integer)getSession().save(transientInstance);
 			log.debug("save successful");
+			return key;
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;

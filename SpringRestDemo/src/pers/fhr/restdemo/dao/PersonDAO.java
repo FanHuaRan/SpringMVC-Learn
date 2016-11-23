@@ -1,7 +1,6 @@
-package pers.fhr.autogenerate.entitydao;
+package pers.fhr.restdemo.dao;
 
 import java.util.List;
-
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
@@ -9,28 +8,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import pers.fhr.autogenerate.entity.Examclass;
+import pers.fhr.restdemo.entity.Person;
 
 /**
  * A data access object (DAO) providing persistence and search support for
- * Examclass entities. Transaction control of the save(), update() and delete()
+ * Person entities. Transaction control of the save(), update() and delete()
  * operations can directly support Spring container-managed transactions or they
  * can be augmented to handle user-managed Spring transactions. Each of these
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see pers.fhr.autogenerate.entity.Examclass
+ * @see pers.fhr.restdemo.entity.Person
  * @author MyEclipse Persistence Tools
  */
 @Repository
-public class ExamclassDAO extends BaseHibernateDAO {
-	private static final Logger log = LoggerFactory
-			.getLogger(ExamclassDAO.class);
+public class PersonDAO extends BaseHibernateDAO {
+	private static final Logger log = LoggerFactory.getLogger(PersonDAO.class);
 	// property constants
-	public static final String EXAM_CLASS_NAME = "examClassName";
+	public static final String PERSON_NAME = "personName";
+	public static final String AGE = "age";
 
-	public Integer save(Examclass transientInstance) {
-		log.debug("saving Examclass instance");
+	public Integer save(Person transientInstance) {
+		log.debug("saving Person instance");
 		try {
 			Integer key=(Integer)getSession().save(transientInstance);
 			log.debug("save successful");
@@ -41,8 +40,8 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void delete(Examclass persistentInstance) {
-		log.debug("deleting Examclass instance");
+	public void delete(Person persistentInstance) {
+		log.debug("deleting Person instance");
 		try {
 			getSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -52,11 +51,11 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Examclass findById(java.lang.Integer id) {
-		log.debug("getting Examclass instance with id: " + id);
+	public Person findById(java.lang.Long id) {
+		log.debug("getting Person instance with id: " + id);
 		try {
-			Examclass instance = (Examclass) getSession().get("pers.fhr.autogenerate.entity.Examclass",
-					id);
+			Person instance = (Person) getSession().get(
+					"pers.fhr.restdemo.entity.Person", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -64,10 +63,11 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public List findByExample(Examclass instance) {
-		log.debug("finding Examclass instance by example");
+	public List findByExample(Person instance) {
+		log.debug("finding Person instance by example");
 		try {
-			List results = getSession().createCriteria("pers.fhr.autogenerate.entity.Examclass")
+			List results = getSession()
+					.createCriteria("pers.fhr.restdemo.entity.Person")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());
@@ -79,10 +79,10 @@ public class ExamclassDAO extends BaseHibernateDAO {
 	}
 
 	public List findByProperty(String propertyName, Object value) {
-		log.debug("finding Examclass instance with property: " + propertyName
+		log.debug("finding Person instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from Examclass as model where model."
+			String queryString = "from Person as model where model."
 					+ propertyName + "= ?";
 			Query queryObject = getSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
@@ -93,14 +93,18 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public List findByExamClassName(Object examClassName) {
-		return findByProperty(EXAM_CLASS_NAME, examClassName);
+	public List findByPersonName(Object personName) {
+		return findByProperty(PERSON_NAME, personName);
+	}
+
+	public List findByAge(Object age) {
+		return findByProperty(AGE, age);
 	}
 
 	public List findAll() {
-		log.debug("finding all Examclass instances");
+		log.debug("finding all Person instances");
 		try {
-			String queryString = "from Examclass";
+			String queryString = "from Person";
 			Query queryObject = getSession().createQuery(queryString);
 			return queryObject.list();
 		} catch (RuntimeException re) {
@@ -109,10 +113,10 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Examclass merge(Examclass detachedInstance) {
-		log.debug("merging Examclass instance");
+	public Person merge(Person detachedInstance) {
+		log.debug("merging Person instance");
 		try {
-			Examclass result = (Examclass) getSession().merge(detachedInstance);
+			Person result = (Person) getSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -121,8 +125,8 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachDirty(Examclass instance) {
-		log.debug("attaching dirty Examclass instance");
+	public void attachDirty(Person instance) {
+		log.debug("attaching dirty Person instance");
 		try {
 			getSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -132,8 +136,8 @@ public class ExamclassDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public void attachClean(Examclass instance) {
-		log.debug("attaching clean Examclass instance");
+	public void attachClean(Person instance) {
+		log.debug("attaching clean Person instance");
 		try {
 			getSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");

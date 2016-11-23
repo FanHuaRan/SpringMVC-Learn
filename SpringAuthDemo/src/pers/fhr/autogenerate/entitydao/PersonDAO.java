@@ -30,11 +30,12 @@ public class PersonDAO extends BaseHibernateDAO {
 	public static final String PERSON_NAME = "personName";
 	public static final String AGE = "age";
 
-	public void save(Person transientInstance) {
+	public Integer save(Person transientInstance) {
 		log.debug("saving Person instance");
 		try {
-			getSession().save(transientInstance);
+			Integer key=(Integer)getSession().save(transientInstance);
 			log.debug("save successful");
+			return key;
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
 			throw re;

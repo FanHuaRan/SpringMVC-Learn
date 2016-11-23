@@ -1,7 +1,7 @@
-package pers.fhr.autogenerate.entitydao;
+package pers.fhr.restdemo.dao;
 
 import java.util.List;
-
+import java.util.Set;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import pers.fhr.autogenerate.entity.Examclass;
+import pers.fhr.restdemo.entity.Examclass;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -19,7 +19,7 @@ import pers.fhr.autogenerate.entity.Examclass;
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see pers.fhr.autogenerate.entity.Examclass
+ * @see pers.fhr.restdemo.entity.Examclass
  * @author MyEclipse Persistence Tools
  */
 @Repository
@@ -55,8 +55,8 @@ public class ExamclassDAO extends BaseHibernateDAO {
 	public Examclass findById(java.lang.Integer id) {
 		log.debug("getting Examclass instance with id: " + id);
 		try {
-			Examclass instance = (Examclass) getSession().get("pers.fhr.autogenerate.entity.Examclass",
-					id);
+			Examclass instance = (Examclass) getSession().get(
+					"pers.fhr.restdemo.entity.Examclass", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -67,7 +67,8 @@ public class ExamclassDAO extends BaseHibernateDAO {
 	public List findByExample(Examclass instance) {
 		log.debug("finding Examclass instance by example");
 		try {
-			List results = getSession().createCriteria("pers.fhr.autogenerate.entity.Examclass")
+			List results = getSession()
+					.createCriteria("pers.fhr.restdemo.entity.Examclass")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

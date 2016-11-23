@@ -50,4 +50,8 @@ public class UserController {
 		session.removeAttribute("user");
 		return "redirect:/logoing";
 	}
+	@RequestMapping("/regist")
+	public String regist(){
+		return "redirect:login";
+	}
 }

@@ -13,7 +13,7 @@ import org.springframework.core.annotation.Order;
  * 使用角色类型作为注解 也就是说我们的权限控制是横向控制
  * 如果使用权限作为注解，就是纵向，更为精细和灵活
  * @author Administrator
- *
+ * 
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD,ElementType.TYPE})

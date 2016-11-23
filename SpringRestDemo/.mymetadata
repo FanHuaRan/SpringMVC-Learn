@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SpringRestDemo"
+  id="myeclipse.1479861876270"
+  context-root="/SpringRestDemo"
+  j2ee-spec="6.0"
+  archive="SpringRestDemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
