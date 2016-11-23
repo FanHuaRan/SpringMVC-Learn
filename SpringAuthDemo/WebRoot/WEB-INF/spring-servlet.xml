@@ -13,7 +13,7 @@
    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <!-- 设置注解进行扫描的包 -->
 	<context:component-scan base-package="pers.fhr.autogenerate"/>
-	<!-- 配置注解驱动 -->
+	<!-- 配置mvc注解驱动 -->
 	 <mvc:annotation-driven />
 	<!-- 配置视图解析器 在控制器返回之后 根据返回结果和下面的prefix suffix进行拼接 从而决定使用哪个视图-->
 	<bean id="viewResolver"
