@@ -9,17 +9,17 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
-    <!-- 配置Spring的上下文容器 -->
-   <!--  
+    <!-- 配置Spring的上下文容器-->
+   
     <listener>  
         <listener-class>org.springframework.web.context.ContextLoaderListener  
         </listener-class>  
     </listener>  
   <context-param>  
         <param-name>contextConfigLocation</param-name>  
-        <param-value>/WEB-INF/applicationContext.xml</param-value>  
+        <param-value>classpath*:applicationContext.xml</param-value>  
    </context-param>  
-   -->
+
    <!-- 配置编码拦截器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
