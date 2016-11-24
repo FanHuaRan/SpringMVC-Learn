@@ -1,4 +1,4 @@
-package pers.fhr.autogenerate.service;
+package pers.fhr.autogenerate.service.impl;
 
 import javax.annotation.Resource;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import pers.fhr.autogenerate.entity.Person;
 import pers.fhr.autogenerate.entitydao.PersonDAO;
+import pers.fhr.autogenerate.service.IUserDeal;
 @Service
 public class UserDealImpl implements IUserDeal {
 	@Autowired

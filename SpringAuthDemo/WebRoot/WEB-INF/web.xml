@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   
     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">  
  <welcome-file-list>
-    <welcome-file>/WEB-INF/view/logoing.jsp</welcome-file>
+    <welcome-file>/view/logoing.jsp</welcome-file>
   </welcome-file-list>
   <!-- 配置Spring的上下文容器 -->
   <context-param>  

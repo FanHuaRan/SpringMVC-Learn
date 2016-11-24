@@ -1,4 +1,4 @@
-package pers.fhr.autogenerate.service;
+package pers.fhr.autogenerate.service.impl;
 
 import java.util.List;
 import java.util.Set;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import pers.fhr.autogenerate.entity.Examclass;
 import pers.fhr.autogenerate.entity.Person;
 import pers.fhr.autogenerate.entitydao.ExamclassDAO;
+import pers.fhr.autogenerate.service.IQuerySomething;
 @Service
 public class QuerySomethingImpl implements IQuerySomething{
 	@Autowired
