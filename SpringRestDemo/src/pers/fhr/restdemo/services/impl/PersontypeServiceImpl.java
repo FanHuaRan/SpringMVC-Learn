@@ -1,4 +1,4 @@
-package pers.fhr.restdemo.services;
+package pers.fhr.restdemo.services.impl;
 
 import java.util.List;
 
@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 
 import pers.fhr.restdemo.dao.PersontypeDAO;
 import pers.fhr.restdemo.entity.Persontype;
+import pers.fhr.restdemo.services.IPersontypeService;
 @Service
-public class PersontypeServiceImpl implements IBaseEntityService<Persontype> {
+public class PersontypeServiceImpl implements IPersontypeService {
 	private PersontypeDAO persontypeDAO;
 	@Autowired
 	public void setPersontypeDao(PersontypeDAO persontypeDAO){

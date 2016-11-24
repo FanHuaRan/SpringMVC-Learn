@@ -14,7 +14,7 @@ public abstract class AbstractExamclass implements java.io.Serializable {
 
 	private Integer examClassId;
 	private String examClassName;
-	private Set persons = new HashSet(0);
+
 
 	// Constructors
 
@@ -28,11 +28,9 @@ public abstract class AbstractExamclass implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractExamclass(Integer examClassId, String examClassName,
-			Set persons) {
+	public AbstractExamclass(Integer examClassId, String examClassName) {
 		this.examClassId = examClassId;
 		this.examClassName = examClassName;
-		this.persons = persons;
 	}
 
 	// Property accessors
@@ -51,14 +49,6 @@ public abstract class AbstractExamclass implements java.io.Serializable {
 
 	public void setExamClassName(String examClassName) {
 		this.examClassName = examClassName;
-	}
-
-	public Set getPersons() {
-		return this.persons;
-	}
-
-	public void setPersons(Set persons) {
-		this.persons = persons;
 	}
 
 }

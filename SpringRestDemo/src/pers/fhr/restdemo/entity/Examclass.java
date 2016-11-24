@@ -21,7 +21,7 @@ public class Examclass extends AbstractExamclass implements
 
 	/** full constructor */
 	public Examclass(Integer examClassId, String examClassName, Set persons) {
-		super(examClassId, examClassName, persons);
+		super(examClassId, examClassName);
 	}
 
 }

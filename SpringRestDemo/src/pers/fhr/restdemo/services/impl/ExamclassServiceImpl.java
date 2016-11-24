@@ -1,4 +1,4 @@
-package pers.fhr.restdemo.services;
+package pers.fhr.restdemo.services.impl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import pers.fhr.restdemo.dao.ExamclassDAO;
 import pers.fhr.restdemo.entity.Examclass;
+import pers.fhr.restdemo.services.IExamclassService;
 @Service
 public class ExamclassServiceImpl implements IExamclassService {
 	private ExamclassDAO examclassDAO;

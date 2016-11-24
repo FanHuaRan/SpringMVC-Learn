@@ -21,7 +21,7 @@ public class Persontype extends AbstractPersontype implements
 
 	/** full constructor */
 	public Persontype(Short personTypeId, String personTypeName, Set persons) {
-		super(personTypeId, personTypeName, persons);
+		super(personTypeId, personTypeName);
 	}
 
 }

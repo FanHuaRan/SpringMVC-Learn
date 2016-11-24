@@ -13,11 +13,5 @@
         <property name="examClassName" type="java.lang.String">
             <column name="ExamClassName" length="30" />
         </property>
-        <set name="persons" inverse="true">
-            <key>
-                <column name="ExamClassID" />
-            </key>
-            <one-to-many class="pers.fhr.restdemo.entity.Person" />
-        </set>
     </class>
 </hibernate-mapping>

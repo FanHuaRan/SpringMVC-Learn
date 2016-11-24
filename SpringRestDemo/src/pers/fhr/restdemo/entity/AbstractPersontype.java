@@ -14,7 +14,6 @@ public abstract class AbstractPersontype implements java.io.Serializable {
 
 	private Short personTypeId;
 	private String personTypeName;
-	private Set persons = new HashSet(0);
 
 	// Constructors
 
@@ -28,11 +27,9 @@ public abstract class AbstractPersontype implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractPersontype(Short personTypeId, String personTypeName,
-			Set persons) {
+	public AbstractPersontype(Short personTypeId, String personTypeName) {
 		this.personTypeId = personTypeId;
 		this.personTypeName = personTypeName;
-		this.persons = persons;
 	}
 
 	// Property accessors
@@ -51,14 +48,6 @@ public abstract class AbstractPersontype implements java.io.Serializable {
 
 	public void setPersonTypeName(String personTypeName) {
 		this.personTypeName = personTypeName;
-	}
-
-	public Set getPersons() {
-		return this.persons;
-	}
-
-	public void setPersons(Set persons) {
-		this.persons = persons;
 	}
 
 }

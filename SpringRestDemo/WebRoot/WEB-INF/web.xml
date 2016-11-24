@@ -4,20 +4,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-  <display-name></display-name>	
+  <display-name>restWebService</display-name>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <!-- 配置Spring的上下文容器 -->
-  <context-param>  
-        <param-name>contextConfigLocation</param-name>  
-        <param-value>classpath*:applicationContext.xml</param-value>  
-   </context-param>  
+  
+    <!-- 配置Spring的上下文容器 -->
+   <!--  
     <listener>  
         <listener-class>org.springframework.web.context.ContextLoaderListener  
         </listener-class>  
     </listener>  
-    
+  <context-param>  
+        <param-name>contextConfigLocation</param-name>  
+        <param-value>/WEB-INF/applicationContext.xml</param-value>  
+   </context-param>  
+   -->
    <!-- 配置编码拦截器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>

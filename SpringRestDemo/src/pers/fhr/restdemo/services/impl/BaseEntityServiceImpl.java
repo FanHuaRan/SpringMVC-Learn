@@ -1,6 +1,8 @@
-package pers.fhr.restdemo.services;
+package pers.fhr.restdemo.services.impl;
 
 import java.util.List;
+
+import pers.fhr.restdemo.services.IBaseEntityService;
 
 public abstract  class BaseEntityServiceImpl<T,V> implements IBaseEntityService<T> {
 	private V entityDao;

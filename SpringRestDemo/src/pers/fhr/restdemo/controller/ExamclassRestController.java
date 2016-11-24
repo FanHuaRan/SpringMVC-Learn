@@ -32,7 +32,7 @@ public class ExamclassRestController {
 		return examclassService.findAll();
 	}
 	@ResponseBody
-	@RequestMapping(value="/examclass/{id}}",
+	@RequestMapping(value="/examclass/{id}",
 					method=RequestMethod.GET,
 					produces=MediaType.APPLICATION_JSON_VALUE)
 	public Examclass findOne(@PathVariable Integer id){
