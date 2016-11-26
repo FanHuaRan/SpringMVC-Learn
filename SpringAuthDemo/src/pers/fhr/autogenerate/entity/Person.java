@@ -19,8 +19,8 @@ public class Person extends AbstractPerson implements java.io.Serializable {
 
 	/** full constructor */
 	public Person(Long personId, Persontype persontype, Examclass examclass,
-			String personName, Integer age) {
-		super(personId, persontype, examclass, personName, age);
+			String personName, Integer age,String password) {
+		super(personId, persontype, examclass, personName, age,password);
 	}
 
 }

@@ -23,11 +23,12 @@ public class UserController {
 		this.userDeal=userDeal;
 	}
 	@RequestMapping("/logoing")
-	public ModelAndView loging(String userName,String userID,HttpSession session){
-		if(userName==null||userID==null){
+	public ModelAndView loging(Long userId,String password,HttpSession session){
+		if(userId==null||password==null){
 			return new ModelAndView("logoing","msg","");
 		}
-		Person person=userDeal.logoing(Long.parseLong(userID), userName);
+		System.out.print(password);
+		Person person=userDeal.logoing(password,userId);
 		if(person==null){
 			return new ModelAndView("logoing","msg","账号或者密码错误");
 		}

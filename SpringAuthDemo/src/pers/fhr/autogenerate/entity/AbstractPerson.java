@@ -15,7 +15,7 @@ public abstract class AbstractPerson implements java.io.Serializable {
 	private Examclass examclass;
 	private String personName;
 	private Integer age;
-
+	private String password;
 	// Constructors
 
 	/** default constructor */
@@ -29,12 +29,13 @@ public abstract class AbstractPerson implements java.io.Serializable {
 
 	/** full constructor */
 	public AbstractPerson(Long personId, Persontype persontype,
-			Examclass examclass, String personName, Integer age) {
+			Examclass examclass, String personName, Integer age,String password) {
 		this.personId = personId;
 		this.persontype = persontype;
 		this.examclass = examclass;
 		this.personName = personName;
 		this.age = age;
+		this.password=password;
 	}
 
 	// Property accessors
@@ -78,5 +79,12 @@ public abstract class AbstractPerson implements java.io.Serializable {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-
+	
+	public String getPassword(){
+		return this.password;
+	}
+	
+	public void setPassword(String password){
+		this.password=password;
+	}
 }

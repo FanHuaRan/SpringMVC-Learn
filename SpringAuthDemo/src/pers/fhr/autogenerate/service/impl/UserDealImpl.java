@@ -18,9 +18,9 @@ public class UserDealImpl implements IUserDeal {
 	public UserDealImpl(){
 		//personDAO=new PersonDAO();
 	}
-	public Person logoing(Long userID, String userName) {
-		Person person= personDAO.findById(userID);
-		if(person==null||!person.getPersonName().equals(userName)){
+	public Person logoing(String password,Long userId) {
+		Person person= personDAO.findById(userId);
+		if(person==null||!person.getPassword().equals(password)){
 			return null;
 		}
 		return person;
