@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import pers.fhr.restdemo.dao.ExamclassDAO;
 import pers.fhr.restdemo.entity.Examclass;
 import pers.fhr.restdemo.services.IExamclassService;
+/**
+ * 班级服务类
+ * @author FHR
+ * @time 2016/11/25
+ */
 @Service
 public class ExamclassServiceImpl implements IExamclassService {
 	private ExamclassDAO examclassDAO;

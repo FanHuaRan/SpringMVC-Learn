@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +15,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import pers.fhr.restdemo.entity.Examclass;
 import pers.fhr.restdemo.services.IExamclassService;
-
+/**
+ * 班级Rest控制器
+ * @author FHR
+ * @time 2016/11/25
+ */
 @Controller
 public class ExamclassRestController {
 	private IExamclassService examclassService;

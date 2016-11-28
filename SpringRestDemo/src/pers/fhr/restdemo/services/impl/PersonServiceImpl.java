@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import pers.fhr.restdemo.dao.PersonDAO;
 import pers.fhr.restdemo.entity.Person;
 import pers.fhr.restdemo.services.IPersonService;
+/**
+ * 人员服务类
+ * @author FHR
+ * @time 2016/11/25
+ */
 @Service
 public class PersonServiceImpl implements IPersonService {
 	private PersonDAO personDAO;
@@ -52,6 +57,10 @@ public class PersonServiceImpl implements IPersonService {
 	@Override
 	public void delete(Person object) {
 		personDAO.delete(object);
+	}
+	@Override
+	public Person findByName(String name) {
+		return (Person) personDAO.findByPersonName(name);
 	}
 
 }

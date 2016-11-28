@@ -3,7 +3,11 @@ package pers.fhr.restdemo.services.impl;
 import java.util.List;
 
 import pers.fhr.restdemo.services.IBaseEntityService;
-
+/**
+ * 基础实体服务类
+ * @author FHR
+ * @time 2016/11/25
+ */
 public abstract  class BaseEntityServiceImpl<T,V> implements IBaseEntityService<T> {
 	private V entityDao;
 	

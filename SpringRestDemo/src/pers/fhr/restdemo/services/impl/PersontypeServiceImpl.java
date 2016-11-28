@@ -8,6 +8,11 @@ import org.springframework.stereotype.Service;
 import pers.fhr.restdemo.dao.PersontypeDAO;
 import pers.fhr.restdemo.entity.Persontype;
 import pers.fhr.restdemo.services.IPersontypeService;
+/**
+ * 人员类型服务类
+ * @author FHR
+ * @time 2016/11/25
+ */
 @Service
 public class PersontypeServiceImpl implements IPersontypeService {
 	private PersontypeDAO persontypeDAO;

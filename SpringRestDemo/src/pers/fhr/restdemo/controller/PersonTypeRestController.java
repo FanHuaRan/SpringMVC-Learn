@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import pers.fhr.restdemo.entity.Persontype;
 import pers.fhr.restdemo.services.IPersontypeService;
+/**
+ * 人员类型Rest控制器
+ * @author FHR
+ * @time 2016/11/25
+ */
 @Controller
 public class PersonTypeRestController {
 	private IPersontypeService persontypeService;
