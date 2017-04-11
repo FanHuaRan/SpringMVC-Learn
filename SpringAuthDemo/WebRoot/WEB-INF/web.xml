@@ -17,7 +17,7 @@
         </listener-class>  
     </listener>  
     
-   <!-- 配置编码拦截器 -->
+   <!-- 配置编码过滤器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

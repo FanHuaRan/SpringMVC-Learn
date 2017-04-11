@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project adv-config="true">
+  <add-on id="spring.test"/>
+  <add-on id="spring.web"/>
+  <add-on id="spring.persistence"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring.webflow_2.3">
+    <forced-facet id="jst.jsf" version="2.0"/>
+  </container>
+</project>

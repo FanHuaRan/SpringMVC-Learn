@@ -20,7 +20,7 @@
         <param-value>classpath*:applicationContext.xml,/WEB-INF/spring-security.xml</param-value>  
    </context-param>  
 
-   <!-- 配置编码拦截器 -->
+   <!-- 配置编码过滤器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -37,7 +37,7 @@
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <!-- 权限拦截器 -->
+  <!-- 权限过滤器 -->
      <filter>
       <filter-name>springSecurityFilterChain</filter-name>
      <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>

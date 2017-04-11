@@ -9,7 +9,7 @@ import pers.fhr.restdemo.services.IBaseEntityService;
  * @time 2016/11/25
  */
 public abstract  class BaseEntityServiceImpl<T,V> implements IBaseEntityService<T> {
-	private V entityDao;
+	private  V entityDao;
 	
 	@Override
 	public T findById(Integer id) {
